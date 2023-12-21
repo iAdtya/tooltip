@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Tooltip({ position, children }) {
+function Tooltip({ position }) {
   const [visible, setVisible] = useState(false);
 
   const handleMouseOn = () => {
@@ -19,7 +19,7 @@ function Tooltip({ position, children }) {
           onMouseOver={handleMouseOn}
           onMouseOut={handleMouseLeave}
         >
-          {children} Hover Over Me!!
+          Hover Over Me!!
         </button>
       </div>
       {visible && (
