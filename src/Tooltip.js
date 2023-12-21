@@ -1,43 +1,36 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function ToolTip({ position }) {
-  const [flag, setFlag] = useState(false);
+function Tooltip({ position, children }) {
+  const [visible, setVisible] = useState(false);
 
   const handleMouseOn = () => {
-    setFlag(true);
+    setVisible(true);
   };
 
   const handleMouseLeave = () => {
-    setFlag(false);
+    setVisible(false);
   };
 
-  const visible = { display: flag ? "block" : "none" };
-
   return (
-    <>
-      <div>
+    <div className="relative flex justify-center items-center  border-b border-black border-dotted mt-16 w-36 p-2 rounded-ful font-bold">
+      <div className="flex justify-center items-center w-full h-full">
         <button
-          className="bg-violet-600 h-20 w-28 rounded-xl"
-          data-tooltip-target="tooltip-light"
-          data-tooltip-style="light"
-          type="button"
+          className="bg-green-700 text-white px-4 py-2 rounded"
           onMouseOver={handleMouseOn}
           onMouseOut={handleMouseLeave}
         >
-          Hover Over Me!!
+          {children} Hover Over Me!!
         </button>
-        <div
-          id="tooltip-light"
-          role="tooltip"
-          className={`${position}`}
-          style={visible}
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip"
-        >
-          i am {position} tip
-          <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
       </div>
-    </>
+      {visible && (
+        <div
+          className={`absolute z-10 px-3 py-2 text-white bg-violet-700 rounded shadow tooltip ${position}`}
+        >
+          Tooltip on {position}
+        </div>
+      )}
+    </div>
   );
 }
+
+export default Tooltip;
