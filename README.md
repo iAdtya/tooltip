@@ -2,6 +2,9 @@
 
 This is a React project that includes a Tooltip component.
 
+## Output
+![Screenshot 2023-12-21 054401](https://github.com/iAdtya/tooltip/assets/93979441/cbf47730-802b-4f5a-93e5-35ab22b50cac)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -39,5 +42,3 @@ Contributions are what make the open source community such an amazing place to l
 License
 Distributed under the MIT License. See LICENSE for more information.
 
-Contact
-Your Name - @twitter_handle - email
