@@ -29,36 +29,28 @@ function App() {
           <button
             onClick={handleClick}
             value="right"
-            className={`bg-blue-700  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg ${
-              selectButton === "right" ? "selected" : ""
-            }`}
+            className={`bg-blue-700  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg `}
           >
             Right
           </button>
           <button
             onClick={handleClick}
             value="left"
-            className={`bg-[#c084fc] ml-4 hover:bg-[#c084fc] text-white font-bold py-2 px-4 rounded-lg ${
-              selectButton === "left" ? "selected" : ""
-            }`}
+            className={`bg-[#c084fc] ml-4 hover:bg-[#c084fc] text-white font-bold py-2 px-4 rounded-lg `}
           >
             Left
           </button>
           <button
             onClick={handleClick}
             value="top"
-            className={`bg-[#a3e635] ml-4 hover:bg-[#a3e635] text-white font-bold py-2 px-4 rounded-lg ${
-              selectButton === "top" ? "selected" : ""
-            }`}
+            className={`bg-[#a3e635] ml-4 hover:bg-[#a3e635] text-white font-bold py-2 px-4 rounded-lg`}
           >
             Top
           </button>
           <button
             onClick={handleClick}
             value="bottom"
-            className={` bg-[#fbbf24] ml-4 hover:bg-[#fbbf24]  text-white font-bold py-2 px-4 rounded-lg ${
-              selectButton === "bottom" ? "selected" : ""
-            }`}
+            className={` bg-[#fbbf24] ml-4 hover:bg-[#fbbf24]  text-white font-bold py-2 px-4 rounded-lg`}
           >
             Bottom
           </button>
